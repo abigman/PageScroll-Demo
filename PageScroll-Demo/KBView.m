@@ -16,43 +16,29 @@
     if (self = [super init]) {
         
         UILabel *one = [UILabel autolayoutView];
-        one.text = KBArr[0];
-        one.font = [UIFont systemFontOfSize:15];
-        one.backgroundColor = [UIColor redColor];
-        one.textAlignment = NSTextAlignmentCenter;
-        
-        one.numberOfLines = 0;
-        [self addSubview:one];
         
         UILabel *two = [UILabel autolayoutView];
-        two.text = KBArr[1];
-        two.textAlignment = NSTextAlignmentCenter;
-        two.backgroundColor = [UIColor blackColor];
-        [self addSubview:two];
         
         UILabel *three = [UILabel autolayoutView];
-        three.text = KBArr[2];
-        three.textAlignment = NSTextAlignmentCenter;
-        
-        [self addSubview:three];
         
         UILabel *four = [UILabel autolayoutView];
-        four.text = KBArr[3];
-        four.textAlignment = NSTextAlignmentCenter;
-        four.backgroundColor = [UIColor blueColor];
-        [self addSubview:four];
         
         UILabel *five = [UILabel autolayoutView];
-        five.text = KBArr[4];
-        five.textAlignment = NSTextAlignmentCenter;
-        
-        [self addSubview:five];
         
         
+        NSInteger labelNumber = 0;
+        for (UILabel *lable in @[one, two, three, four, five]) {
+            
+            lable.text = KBArr[labelNumber++];
+            lable.font = [UIFont systemFontOfSize:14];
+            lable.textAlignment = NSTextAlignmentCenter;
+            lable.numberOfLines = 0;
+            [self addSubview:lable];
+        }
         
+        NSInteger screenWidth = [[UIScreen mainScreen] bounds].size.width / 2;
         
-        
-        NSDictionary *metrics = @{@"height":@50.0};
+        NSDictionary *metrics = @{@"height":@(screenWidth)};
         NSDictionary *views = NSDictionaryOfVariableBindings(one, two, three, four, five);
         
         NSArray *constraints1 = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[one(two)]-[two(three)]-[three(four)]-[four(five)]-[five]-|" options:0 metrics:metrics views:views];
