@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MSTabScrollView.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController  <MSTabScrollViewDelegate>
 
 
 @end
