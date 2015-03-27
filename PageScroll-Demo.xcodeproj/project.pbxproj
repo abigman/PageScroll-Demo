@@ -14,6 +14,7 @@
 		D569E79D1AC5869F003ED57B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D569E79C1AC5869F003ED57B /* Images.xcassets */; };
 		D569E7A01AC5869F003ED57B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D569E79E1AC5869F003ED57B /* LaunchScreen.xib */; };
 		D569E7AC1AC5869F003ED57B /* PageScroll_DemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D569E7AB1AC5869F003ED57B /* PageScroll_DemoTests.m */; };
+		D569E7B81AC58AB3003ED57B /* libMSPageTab.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D569E7B61AC58AB3003ED57B /* libMSPageTab.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		D569E7A51AC5869F003ED57B /* PageScroll-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PageScroll-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D569E7AA1AC5869F003ED57B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D569E7AB1AC5869F003ED57B /* PageScroll_DemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageScroll_DemoTests.m; sourceTree = "<group>"; };
+		D569E7B61AC58AB3003ED57B /* libMSPageTab.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMSPageTab.a; sourceTree = "<group>"; };
+		D569E7B71AC58AB3003ED57B /* MSTabScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSTabScrollView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D569E7B81AC58AB3003ED57B /* libMSPageTab.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +96,7 @@
 		D569E78F1AC5869F003ED57B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D569E7B51AC58AB3003ED57B /* MSPageScrollView */,
 				D569E7931AC5869F003ED57B /* AppDelegate.h */,
 				D569E7941AC5869F003ED57B /* AppDelegate.m */,
 				D569E7901AC5869F003ED57B /* Info.plist */,
@@ -117,6 +122,15 @@
 				D569E7AA1AC5869F003ED57B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D569E7B51AC58AB3003ED57B /* MSPageScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				D569E7B61AC58AB3003ED57B /* libMSPageTab.a */,
+				D569E7B71AC58AB3003ED57B /* MSTabScrollView.h */,
+			);
+			path = MSPageScrollView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +361,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "PageScroll-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PageScroll-Demo/MSPageScrollView",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -357,6 +375,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "PageScroll-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PageScroll-Demo/MSPageScrollView",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
