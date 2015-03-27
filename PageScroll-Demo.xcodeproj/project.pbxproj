@@ -81,13 +81,9 @@
 		D569E78E1AC5869F003ED57B /* PageScroll-Demo */ = {
 			isa = PBXGroup;
 			children = (
-				D569E7931AC5869F003ED57B /* AppDelegate.h */,
-				D569E7941AC5869F003ED57B /* AppDelegate.m */,
+				D569E7991AC5869F003ED57B /* Main.storyboard */,
 				D569E7961AC5869F003ED57B /* ViewController.h */,
 				D569E7971AC5869F003ED57B /* ViewController.m */,
-				D569E7991AC5869F003ED57B /* Main.storyboard */,
-				D569E79C1AC5869F003ED57B /* Images.xcassets */,
-				D569E79E1AC5869F003ED57B /* LaunchScreen.xib */,
 				D569E78F1AC5869F003ED57B /* Supporting Files */,
 			);
 			path = "PageScroll-Demo";
@@ -96,7 +92,11 @@
 		D569E78F1AC5869F003ED57B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D569E7931AC5869F003ED57B /* AppDelegate.h */,
+				D569E7941AC5869F003ED57B /* AppDelegate.m */,
 				D569E7901AC5869F003ED57B /* Info.plist */,
+				D569E79C1AC5869F003ED57B /* Images.xcassets */,
+				D569E79E1AC5869F003ED57B /* LaunchScreen.xib */,
 				D569E7911AC5869F003ED57B /* main.m */,
 			);
 			name = "Supporting Files";
@@ -414,6 +414,7 @@
 				D569E7B11AC5869F003ED57B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D569E7B21AC5869F003ED57B /* Build configuration list for PBXNativeTarget "PageScroll-DemoTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +423,7 @@
 				D569E7B41AC5869F003ED57B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
