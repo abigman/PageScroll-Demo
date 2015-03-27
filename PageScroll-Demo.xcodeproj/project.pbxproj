@@ -86,8 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				D569E7991AC5869F003ED57B /* Main.storyboard */,
-				D569E7961AC5869F003ED57B /* ViewController.h */,
-				D569E7971AC5869F003ED57B /* ViewController.m */,
+				D569E7BA1AC59B90003ED57B /* View */,
+				D569E7B91AC59B87003ED57B /* Controller */,
 				D569E78F1AC5869F003ED57B /* Supporting Files */,
 			);
 			path = "PageScroll-Demo";
@@ -131,6 +131,22 @@
 				D569E7B71AC58AB3003ED57B /* MSTabScrollView.h */,
 			);
 			path = MSPageScrollView;
+			sourceTree = "<group>";
+		};
+		D569E7B91AC59B87003ED57B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D569E7961AC5869F003ED57B /* ViewController.h */,
+				D569E7971AC5869F003ED57B /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		D569E7BA1AC59B90003ED57B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
