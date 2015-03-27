@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "KBView.h"
+
 #define kTabHeight 0
 #define kStatusBarHeight 20
 #define KDevice_Width [[UIScreen mainScreen] bounds].size.width
@@ -73,19 +75,22 @@
 }
 
 - (UIView *)tabScrollView:(UIScrollView *)tabScrollView pageViewForTabIndex:(NSInteger)tabIndex {
-    UIView *pageView = [[UIView alloc]init];
-    pageView.backgroundColor = [UIColor grayColor];
     
-    UILabel *label = [[UILabel alloc]init];
-    label.backgroundColor = [UIColor yellowColor];
-    label.text = [NSString stringWithFormat:@"今天是%@",self.titleArray[tabIndex]];
-    label.textAlignment = NSTextAlignmentCenter;
-    [pageView addSubview:label];
+    KBView *pageView = [[KBView alloc] init];
+    if (tabIndex == 4) {
+        pageView = [KBView viewWithArr:@[@"信号与系统\n1-15\n杨会玉\n尔雅楼402", @"数学建模\n1-4\n王磊\n尔雅楼402", @"信号与系统\n1-15\n杨会玉\n尔雅楼402", @"数学建模\n1-4\n王磊\n尔雅楼402", @"信号与系统\n1-15\n杨会玉\n尔雅楼402"]];
+    }
     
-    [label setCustomLayoutWithVisualFormat1:@"H:|[view]|"
-                                    Format2:@"V:|-100-[view(40)]"
-                                    metrics:nil
-                                  superView:pageView];
+//    UILabel *label = [[UILabel alloc]init];
+//    label.backgroundColor = [UIColor yellowColor];
+//    label.text = [NSString stringWithFormat:@"今天是%@",self.titleArray[tabIndex]];
+//    label.textAlignment = NSTextAlignmentCenter;
+//    [pageView addSubview:label];
+//    
+//    [label setCustomLayoutWithVisualFormat1:@"H:|[view]|"
+//                                    Format2:@"V:|-100-[view(40)]"
+//                                    metrics:nil
+//                                  superView:pageView];
     return pageView;
 }
 
