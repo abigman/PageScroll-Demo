@@ -22,10 +22,33 @@
 
 @implementation ViewController
 
+- (NSInteger)getCurrentWeek {
+    
+    NSDate *now = [NSDate date];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSUInteger unitFlags = NSCalendarUnitWeekOfYear;
+    NSDateComponents *dateComponent = [calendar components:unitFlags fromDate:now];
+    
+    return [dateComponent weekOfYear];
+}
+
+- (NSInteger)getCurrentWeekDay {
+    
+    NSDate *now = [NSDate date];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSUInteger unitFlags = NSCalendarUnitWeekday;
+    NSDateComponents *dateComponent = [calendar components:unitFlags fromDate:now];
+    
+    return [dateComponent weekday];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationItem.title = [NSString stringWithFormat:@"第%d周", [self getCurrentWeek] - 10];
     [self createPageScrollView];
+    
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -42,8 +65,9 @@
     self.tabScrollView = [[MSTabScrollView alloc]initWithPageWidth:pageWidth  PageHeight:pageHeight Delegate:self];
     self.tabScrollView.tabSelectedColor = [UIColor colorWithRed:0/255.0 green:160/255.0 blue:233/255.0 alpha:1]; //默认颜色，可不设置
     self.tabScrollView.tabBackgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1]; //默认颜色，可不设置
-    self.tabScrollView.selectedTabIndex = 4; //默认位置，可不设置
-    self.tabScrollView.isNeedPageCountLimit = NO; //默认不限制，可不设置
+    
+    self.tabScrollView.selectedTabIndex = [self getCurrentWeekDay] - 1;
+    
     [self.tabScrollView handleLayout];
     [self.view addSubview:self.tabScrollView];
     
@@ -65,20 +89,9 @@
 - (UIView *)tabScrollView:(UIScrollView *)tabScrollView pageViewForTabIndex:(NSInteger)tabIndex {
     
     KBView *pageView = [[KBView alloc] init];
-    if (tabIndex == 4) {
-        pageView = [KBView viewWithArr:@[@"信号与系统\n1-15\n杨会玉\n尔雅楼402", @"数学建模\n1-4\n王磊\n尔雅楼402", @"信号与系统\n1-15\n杨会玉\n尔雅楼402", @"数学建模\n1-4\n王磊\n尔雅楼402", @"信号与系统\n1-15\n杨会玉\n尔雅楼402"]];
-    }
-    
-//    UILabel *label = [[UILabel alloc]init];
-//    label.backgroundColor = [UIColor yellowColor];
-//    label.text = [NSString stringWithFormat:@"今天是%@",self.titleArray[tabIndex]];
-//    label.textAlignment = NSTextAlignmentCenter;
-//    [pageView addSubview:label];
-//    
-//    [label setCustomLayoutWithVisualFormat1:@"H:|[view]|"
-//                                    Format2:@"V:|-100-[view(40)]"
-//                                    metrics:nil
-//                                  superView:pageView];
+    pageView = [KBView viewWithArr:@[@"信号与系统\n1-15\n杨会玉\n尔雅楼402", @"数学建模\n1-4\n王磊\n尔雅楼402", @"信号与系统\n1-15\n杨会玉\n尔雅楼402", @"数学建模\n1-4\n王磊\n尔雅楼402", @"信号与系统\n1-15\n杨会玉\n尔雅楼402"]];
+ 
+
     return pageView;
 }
 
