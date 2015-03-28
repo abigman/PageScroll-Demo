@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D51C80681AC6B09D00A1F3A1 /* schedule.plist in Resources */ = {isa = PBXBuildFile; fileRef = D51C80671AC6B09D00A1F3A1 /* schedule.plist */; };
 		D569E7921AC5869F003ED57B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D569E7911AC5869F003ED57B /* main.m */; };
 		D569E7951AC5869F003ED57B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D569E7941AC5869F003ED57B /* AppDelegate.m */; };
 		D569E7981AC5869F003ED57B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D569E7971AC5869F003ED57B /* ViewController.m */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D51C80671AC6B09D00A1F3A1 /* schedule.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = schedule.plist; sourceTree = "<group>"; };
 		D569E78C1AC5869F003ED57B /* PageScroll-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PageScroll-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D569E7901AC5869F003ED57B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D569E7911AC5869F003ED57B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		D569E7B91AC59B87003ED57B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D51C80671AC6B09D00A1F3A1 /* schedule.plist */,
 				D569E7961AC5869F003ED57B /* ViewController.h */,
 				D569E7971AC5869F003ED57B /* ViewController.m */,
 			);
@@ -241,6 +244,7 @@
 			files = (
 				D569E79B1AC5869F003ED57B /* Main.storyboard in Resources */,
 				D569E7A01AC5869F003ED57B /* LaunchScreen.xib in Resources */,
+				D51C80681AC6B09D00A1F3A1 /* schedule.plist in Resources */,
 				D569E79D1AC5869F003ED57B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

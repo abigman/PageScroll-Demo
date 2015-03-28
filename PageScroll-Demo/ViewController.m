@@ -26,7 +26,6 @@
     [super viewDidLoad];
     
     [self createPageScrollView];
-//    [self createBottomView];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -57,17 +56,6 @@
                                                superView:self.view];
 }
 
-//- (void)createBottomView {
-//    UIView *bottomView = [[UIView alloc]init];
-//    bottomView.backgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1];
-//    [self.view addSubview:bottomView];
-//    NSDictionary *metrics = @{@"Height":@(kBottomHeight)};
-//    [bottomView setCustomLayoutWithVisualFormat1:@"H:|[view]|"
-//                                         Format2:@"V:[view(Height)]|"
-//                                         metrics:metrics
-//                                       superView:self.view];
-//    
-//}
 
 #pragma mark - MSTabScrollViewDelegate
 - (NSInteger)NumberOfTabInTabScrollView:(UIScrollView *)tabScrollView {
