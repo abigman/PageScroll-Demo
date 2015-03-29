@@ -9,6 +9,7 @@
 #import "UIView+Autolayout.h"
 
 @implementation UIView (Autolayout)
+
 +(instancetype)autolayoutView
 {
     UIView *view = [self new];

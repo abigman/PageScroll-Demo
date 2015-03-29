@@ -22,33 +22,11 @@
 
 @implementation ViewController
 
-- (NSInteger)getCurrentWeek {
-    
-    NSDate *now = [NSDate date];
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSUInteger unitFlags = NSCalendarUnitWeekOfYear;
-    NSDateComponents *dateComponent = [calendar components:unitFlags fromDate:now];
-    
-    return [dateComponent weekOfYear];
-}
-
-- (NSInteger)getCurrentWeekDay {
-    
-    NSDate *now = [NSDate date];
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSUInteger unitFlags = NSCalendarUnitWeekday;
-    NSDateComponents *dateComponent = [calendar components:unitFlags fromDate:now];
-    
-    return [dateComponent weekday];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.navigationItem.title = [NSString stringWithFormat:@"第%d周", [self getCurrentWeek] - 10];
     [self createPageScrollView];
-    
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -58,13 +36,16 @@
 }
 
 - (void)createPageScrollView {
+    
     self.titleArray = @[@"星期一", @"星期二", @"星期三", @"星期四", @"星期五", @"星期六", @"星期日"];
     self.view.backgroundColor = [UIColor whiteColor];
     CGFloat pageHeight = KDevice_Height - kStatusBarHeight;
     CGFloat pageWidth = KDevice_Width;
+    
     self.tabScrollView = [[MSTabScrollView alloc]initWithPageWidth:pageWidth  PageHeight:pageHeight Delegate:self];
-    self.tabScrollView.tabSelectedColor = [UIColor colorWithRed:0/255.0 green:160/255.0 blue:233/255.0 alpha:1]; //默认颜色，可不设置
-    self.tabScrollView.tabBackgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1]; //默认颜色，可不设置
+    self.tabScrollView.tabSelectedColor = [UIColor colorWithRed:0/255.0 green:160/255.0 blue:233/255.0 alpha:1];
+    
+    self.tabScrollView.tabBackgroundColor = [UIColor colorWithRed:0.9 green:0.9 blue:0.9 alpha:1];
     
     self.tabScrollView.selectedTabIndex = [self getCurrentWeekDay] - 1;
     
@@ -82,6 +63,7 @@
 
 
 #pragma mark - MSTabScrollViewDelegate
+
 - (NSInteger)NumberOfTabInTabScrollView:(UIScrollView *)tabScrollView {
     return self.titleArray.count;
 }
@@ -102,8 +84,8 @@
     return nil;
 }
 
-//适应设备旋转时增加以下部分代码
-#pragma mark - UIViewControllerRotation
+
+#pragma mark - 适应设备旋转时增加以下部分代码
 - (BOOL)shouldAutorotate
 {
     return YES;
@@ -134,4 +116,28 @@
     [UIApplication sharedApplication].statusBarOrientation = UIInterfaceOrientationPortrait;
     [[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationPortrait animated:YES];
 }
+
+
+#pragma mark - 两个扩展方法
+
+- (NSInteger)getCurrentWeek {
+    
+    NSDate *now = [NSDate date];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSUInteger unitFlags = NSCalendarUnitWeekOfYear;
+    NSDateComponents *dateComponent = [calendar components:unitFlags fromDate:now];
+    
+    return [dateComponent weekOfYear];
+}
+
+- (NSInteger)getCurrentWeekDay {
+    
+    NSDate *now = [NSDate date];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSUInteger unitFlags = NSCalendarUnitWeekday;
+    NSDateComponents *dateComponent = [calendar components:unitFlags fromDate:now];
+    
+    return [dateComponent weekday];
+}
+
 @end
