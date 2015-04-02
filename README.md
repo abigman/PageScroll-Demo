@@ -17,7 +17,9 @@ PageScroll-Demo like Tencent news.
 项目设置的最低要求是 iOS8，实际上改成 7.0 也能运行，没有用新的 API。
 
 
-![示例图](https://raw.githubusercontent.com/pupboss/PageScroll-Demo/master/screenshot/640x1136ss-80.png)
+![示例图1](https://raw.githubusercontent.com/pupboss/PageScroll-Demo/master/screenshot/640x1136ss-80.png)
+
+![示例图2](https://raw.githubusercontent.com/pupboss/PageScroll-Demo/master/screenshot/screenflow01.gif)
 
 注：使用了 MSTabScrollView 库。
 

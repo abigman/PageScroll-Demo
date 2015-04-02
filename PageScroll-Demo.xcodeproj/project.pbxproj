@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D51556B81ACC21A400780618 /* screenflow01.gif in Resources */ = {isa = PBXBuildFile; fileRef = D51556B71ACC21A400780618 /* screenflow01.gif */; };
 		D51C80681AC6B09D00A1F3A1 /* schedule.plist in Resources */ = {isa = PBXBuildFile; fileRef = D51C80671AC6B09D00A1F3A1 /* schedule.plist */; };
 		D51C806E1AC6BC3800A1F3A1 /* 640x1136ss-80.png in Resources */ = {isa = PBXBuildFile; fileRef = D51C806D1AC6BC3800A1F3A1 /* 640x1136ss-80.png */; };
 		D569E7921AC5869F003ED57B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D569E7911AC5869F003ED57B /* main.m */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D51556B71ACC21A400780618 /* screenflow01.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = screenflow01.gif; sourceTree = "<group>"; };
 		D51C80671AC6B09D00A1F3A1 /* schedule.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = schedule.plist; sourceTree = "<group>"; };
 		D51C806D1AC6BC3800A1F3A1 /* 640x1136ss-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "640x1136ss-80.png"; sourceTree = "<group>"; };
 		D569E78C1AC5869F003ED57B /* PageScroll-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PageScroll-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				D51C806D1AC6BC3800A1F3A1 /* 640x1136ss-80.png */,
+				D51556B71ACC21A400780618 /* screenflow01.gif */,
 			);
 			path = screenshot;
 			sourceTree = SOURCE_ROOT;
@@ -256,6 +259,7 @@
 				D569E79B1AC5869F003ED57B /* Main.storyboard in Resources */,
 				D51C806E1AC6BC3800A1F3A1 /* 640x1136ss-80.png in Resources */,
 				D569E7A01AC5869F003ED57B /* LaunchScreen.xib in Resources */,
+				D51556B81ACC21A400780618 /* screenflow01.gif in Resources */,
 				D51C80681AC6B09D00A1F3A1 /* schedule.plist in Resources */,
 				D569E79D1AC5869F003ED57B /* Images.xcassets in Resources */,
 			);
