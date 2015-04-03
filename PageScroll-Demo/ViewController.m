@@ -10,7 +10,7 @@
 #import "KBView.h"
 
 #define kTabHeight 0
-#define kStatusBarHeight 20
+#define kStatusBarHeight 64
 #define KDevice_Width [[UIScreen mainScreen] bounds].size.width
 #define KDevice_Height [[UIScreen mainScreen] bounds].size.height
 
@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = [NSString stringWithFormat:@"第%d周", [self getCurrentWeek] - 10];
+    self.navigationItem.title = [NSString stringWithFormat:@"第%ld周", [self getCurrentWeek] - 10];
     [self createPageScrollView];
 }
 
