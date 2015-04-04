@@ -37,7 +37,7 @@
 
 - (void)createPageScrollView {
     
-    self.titleArray = @[@"星期一", @"星期二", @"星期三", @"星期四", @"星期五", @"星期六", @"星期日"];
+    self.titleArray = @[@"星期日", @"星期一", @"星期二", @"星期三", @"星期四", @"星期五", @"星期六"];
     self.view.backgroundColor = [UIColor whiteColor];
     CGFloat pageHeight = KDevice_Height - kStatusBarHeight;
     CGFloat pageWidth = KDevice_Width;
